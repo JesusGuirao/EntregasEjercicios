@@ -1,8 +1,13 @@
+body {
+  background-image: url('fondo.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 .caja {
   position: absolute;
-  width: 200px;
-  height: 200px;
-  background-color: red;
-  box-sizing: border-box;
-  border: 2px solid black;
+  width: 350px;
+  height: 147px;
+  background-image: url('heli.png');
 }

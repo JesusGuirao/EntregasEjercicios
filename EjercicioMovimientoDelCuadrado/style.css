@@ -1,0 +1,8 @@
+.caja {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  box-sizing: border-box;
+  border: 2px solid black;
+}

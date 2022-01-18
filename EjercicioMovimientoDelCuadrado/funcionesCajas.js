@@ -1,25 +1,14 @@
-console.log('hola');
+/*By jesús */
+function getMousePosition(event) {
+  // event.preventDefault();
+  console.log(event.clientY, event.clientX);
+  let divcaja = document.getElementById('divcaja');
 
-let caja = document.querySelector('#divcaja');
-
-console.log(caja);
-
-function cajaAbajo() {
-  caja.style.top = '300px';
-}
-
-function cajaArriba() {
-  caja.style.top = '1px';
-}
-
-caja.addEventListener('click', function () {
-  if (caja.id == 'divcaja') {
-    caja.id = 'cajaArriba';
-    cajaAbajo();
-    console.log(caja.id);
+  if (event.clientY <= 100) {
+    divcaja.style.top = `0`;
   } else {
-    caja.id = 'divcaja';
-    cajaArriba();
-    console.log(caja.id);
+    divcaja.style.top = `calc(${event.clientY}px - 100px)`;
   }
-});
+}
+
+document.addEventListener('click', getMousePosition);
